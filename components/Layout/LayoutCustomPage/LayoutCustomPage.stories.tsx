@@ -20,6 +20,7 @@ import {
 	LayoutArea8,
 } from './index';
 
+/* eslint import/no-anonymous-default-export: [2, {"allowObject": true}] */
 export default {
 	title: '3. Components/Layout/Custom page',
 	parameters: {

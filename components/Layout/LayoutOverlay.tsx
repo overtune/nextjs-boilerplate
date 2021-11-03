@@ -1,6 +1,7 @@
 /**
  * LayoutOverlay
  */
+/* eslint-disable */
 
 import React from 'react';
 
@@ -21,7 +22,6 @@ const LayoutOverlay: React.FC<Props> = ({ maxWidth = 'standard' }) => {
 				{Array.from(Array(12)).map((_item, i: number) => {
 					let className = i > 3 ? 'hidden ' : '';
 					className += i < 8 ? 'sm:block ' : '';
-					console.log(i);
 					return (
 						<div
 							className={`${className} lg:block h-full col-span-1 bg-red-500`}

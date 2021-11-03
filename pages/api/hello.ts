@@ -6,6 +6,8 @@ type Data = {
   name: string
 }
 
-export default (req: NextApiRequest, res: NextApiResponse<Data>) => {
+const resolver = (_req: NextApiRequest, res: NextApiResponse<Data>) => {
   res.status(200).json({ name: 'John Doe' })
 }
+
+export default resolver;

@@ -5,6 +5,7 @@
 import React from 'react';
 import ActionButton from './ActionButton';
 
+/* eslint import/no-anonymous-default-export: [2, {"allowObject": true}] */
 export default {
 	title: '3. Components/ActionButton',
 	component: ActionButton,
@@ -25,7 +26,6 @@ const resolveFast = () => {
 	});
 };
 
-
 const rejectAfterXSeconds = () => {
 	return new Promise((_, reject) => {
 		setTimeout(() => {
@@ -43,7 +43,7 @@ const onError = (err: any) => {
 };
 
 export const Default = () => {
-	const title = 'ActionButton component';
+	const title = 'ActionButton';
 	return (
 		<ActionButton
 			onClick={resolveAfterXSeconds}
@@ -63,7 +63,7 @@ export const SuccessfullActionButton = () => {
 			onSuccess={onSuccess}
 			onError={onError}
 		>
-			Lägg i varukorg
+			Add to basket
 		</ActionButton>
 	);
 };
@@ -75,7 +75,7 @@ export const SuccessfullFastActionButton = () => {
 			onSuccess={onSuccess}
 			onError={onError}
 		>
-			Lägg i varukorg
+			Add to basket
 		</ActionButton>
 	);
 };
@@ -87,7 +87,7 @@ export const UnsuccessfullActionButton = () => {
 			onSuccess={onSuccess}
 			onError={onError}
 		>
-			Lägg i varukorg
+			Add to basket
 		</ActionButton>
 	);
 };

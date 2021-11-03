@@ -7,7 +7,8 @@ import { LayoutContainer } from '../LayoutContainer';
 import { MINIMAL_VIEWPORTS } from '@storybook/addon-viewport';
 import Div from '../helpers/StorybookDemoDiv';
 import { Layout2Area_4_7, LayoutArea1, LayoutArea2 } from './index';
-
+ 
+/* eslint import/no-anonymous-default-export: [2, {"allowObject": true}] */
 export default {
 	title: '3. Components/Layout/2 areas - size 4+7',
 	parameters: {
