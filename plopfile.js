@@ -25,7 +25,7 @@ module.exports = function(plop) {
 				data.type === 'Component' ||
 				data.type === 'Page'
 			) {
-				const folder = data.type === 'Page' ? 'pages' : 'components';
+				const folder = data.type === 'Page' ? 'src/pages' : 'src/components';
 
 				actions.push({
 					type: 'add',
@@ -55,13 +55,13 @@ module.exports = function(plop) {
 				} else if (data.type === 'Page') {
 					actions.push({
 						type: 'append',
-						path: 'pages/index.tsx',
+						path: 'src/pages/index.tsx',
 						pattern: `/* PLOP_INJECT_IMPORT */`,
 						template: `import {{properCase name}} from './{{properCase name}}';`,
 					});
 					actions.push({
 						type: 'append',
-						path: 'pages/index.tsx',
+						path: 'src/pages/index.tsx',
 						pattern: `/* PLOP_INJECT_PAGE */`,
 						template: `\t{{properCase name}},`,
 					});
@@ -72,18 +72,18 @@ module.exports = function(plop) {
 			} else if (data.type === 'Hook') {
 				actions.push({
 					type: 'add',
-					path: 'hooks/{{camelCase name}}.ts',
+					path: 'src/hooks/{{camelCase name}}.ts',
 					templateFile: 'plop-templates/hook.hbs',
 				});
 				actions.push({
 					type: 'append',
-					path: 'hooks/index.ts',
+					path: 'src/hooks/index.ts',
 					pattern: `/* PLOP_INJECT_IMPORT */`,
 					template: `import { {{camelCase name}} } from './{{camelCase name}}';`,
 				});
 				actions.push({
 					type: 'append',
-					path: 'hooks/index.ts',
+					path: 'src/hooks/index.ts',
 					pattern: `/* PLOP_INJECT_EXPORT */`,
 					template: `\t{{camelCase name}},`,
 				});

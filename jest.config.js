@@ -15,7 +15,7 @@ module.exports = {
 	},
 	transform: {
 		'^.+\\.(js|jsx|ts|tsx)$': ['babel-jest', { presets: ['next/babel'] }],
-		'^.+\\.svg$': '<rootDir>/utils/svgTransform.js',
+		'^.+\\.svg$': '<rootDir>/test-utils/svgTransform.js',
 	},
 	transformIgnorePatterns: ['/node_modules/'],
 };
