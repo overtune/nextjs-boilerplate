@@ -3,7 +3,7 @@
  */
 
 import React from 'react';
-import { render } from '@utils/test-utils';
+import { render } from '@test-utils/test-utils';
 import { axe, toHaveNoViolations } from 'jest-axe';
 import ActionButton from './ActionButton';
 expect.extend(toHaveNoViolations);

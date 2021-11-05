@@ -20,16 +20,16 @@
     "jsx": "preserve",
     "paths": {
       "@components/*": [
-        "components/*"
+        "src/components/*"
       ],
 	  "@state-machines/*": [
-        "state-machines/*"
+        "src/state-machines/*"
       ],
-	  "@utils/*": [
-        "utils/*"
+	  "@test-utils/*": [
+        "test-utils/*"
       ],
 	  "@hooks/*": [
-        "hooks/*"
+        "src/hooks/*"
       ]
     },
     "incremental": true
