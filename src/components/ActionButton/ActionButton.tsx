@@ -90,6 +90,7 @@ const ActionButton: React.FC<Props> = ({
 				current.matches('failure') && 'bg-red-500 hover:bg-red-600'
 			)}
 		>
+		<img src="https://placehold.it" />
 			{current.matches('loading') && (
 				<div className="relative w-7 h-7">
 					<svg

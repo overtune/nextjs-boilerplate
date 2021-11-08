@@ -10,38 +10,18 @@ import React from 'react';
 import { renderToString as reactDomRenderToString } from 'react-dom/server';
 import { render } from '@testing-library/react';
 
-interface Options {
-	route?: string;
-	history?: any;
-}
-
-const customRender = (
-	ui: any,
-	{
-		route = '/',
-		...renderOptions
-	}: Options = {}
-) => {
-	const AllTheProviders: React.FC = ({ children }) => {
-		// return <Router history={history}>{children}</Router>;
-		return <>children</>;
-	};
-	return {
-		...render(ui, {
-			wrapper: AllTheProviders,
-			...renderOptions,
-		}),
-		history,
-	};
+const AllTheProviders: React.FC = ({ children }) => {
+	// return <Router history={history}>{children}</Router>;
+	return <>{children}</>;
 };
 
-const renderToString = (component: any) => {
-	const AllTheProviders: React.FC = ({ children }) => {
-		return <>{children}</>;
-		// return <Router history={history}>{children}</Router>;
-	};
+const customRender = (ui: any, options?: any) =>
+	render(ui, { wrapper: AllTheProviders, ...options });
 
-	return reactDomRenderToString(<AllTheProviders>{component}</AllTheProviders>);
+const renderToString = (component: any) => {
+	return reactDomRenderToString(
+		<AllTheProviders>{component}</AllTheProviders>
+	);
 };
 
 // re-export everything
