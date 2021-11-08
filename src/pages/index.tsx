@@ -2,17 +2,11 @@ import React from 'react';
 import Head from 'next/head';
 import getConfig from 'next/config';
 import { GetStaticProps } from 'next';
+import { genericPageModel } from 'types/generic-page';
 const { publicRuntimeConfig } = getConfig();
 
-type link = {
-	heading: string;
-	description: string;
-	url: string;
-};
 interface Props {
-	data: {
-		links: link[];
-	};
+	data: genericPageModel; 
 }
 
 const Index: React.FC<Props> = ({ data }) => {
